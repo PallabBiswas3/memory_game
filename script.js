@@ -3,7 +3,7 @@ let secondCard = null;
 let canClick = true;
 
 const cards = document.querySelectorAll('.card');
-
+cards.forEach(card => card.addEventListener('click', flipCard));
 function flipCard() {
     if (!canClick) return;
     if (this === firstCard) return;
@@ -43,4 +43,3 @@ function resetCards() {
     canClick = true;
 }
 
-cards.forEach(card => card.addEventListener('click', flipCard));
